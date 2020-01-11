@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Lista Perfiles from MongoDb</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="mystyles.css" />
+    <script src="main.js"></script>
+  </head>
+  <body>
+    <h1>Todos los perfiles de la base de datos</h1>
+    <% if(typeof err !== 'undefined'){ %>
+    <p><%- error %></p>
+    <% } %> 
+    
+    <% if(typeof results !== 'undefined'){ %> 
+    <% results.forEach(function(item){ %>
+    <div>
+      <p>Nombre: <%- item.username %></p>
+      <p>Género: <%- item.gender %></p>
+      <p>País: <%- item.country %></p>
+    </div>
+    <hr />
+    <% }); %> <% } %>
+  </body>
+</html>

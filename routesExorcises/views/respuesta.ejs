@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Perfil</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='/mystyles.css'>
+</head>
+<body>
+    <% if(typeof profile !== 'undefined'){ %>
+        <h1>Ínformación de Perfil: </h1>
+        <p>Nombre: <%- profile.name %> </p>
+        <p>Género: <%- profile.gender %> </p>
+        <p>País:   <%- profile.country %> </p>
+    <% }else{ %>
+        <h1>No hay información </h1>
+    <% } %>
+</body>
+</html>

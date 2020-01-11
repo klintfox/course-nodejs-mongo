@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="mystyles.css" />
+    
+  </head>
+  <body>
+    <% if (typeof error !== 'undefined'){ %>
+        <h1>Welcome</h1>
+        <h3 style="color:red;">Error: <%- error %> </h3>
+        <form method="POST" action="/submit">
+        <p>Nombre: <input type="text" name="name" value="<%- profile.name %>" /></p>
+        <p>Genero: <input type="text" name="gender" value="<%- profile.gender %>" /></p>
+        <p>Pais: <input type="text" name="country" value="<%- profile.country %>" /></p>
+        <input type="submit" value="Enviar información" />
+        </form>
+    <% }else{ %>
+        <h1>Welcome</h1>
+        <form method="POST" action="/submit">
+        <p>Nombre: <input type="text" name="name" /></p>
+        <p>Genero: <input type="text" name="gender" /></p>
+        <p>Pais: <input type="text" name="country" /></p>
+        <input type="submit" value="Enviar información" />
+        </form>
+      <% } %>
+    
+    
+  </body>
+</html>

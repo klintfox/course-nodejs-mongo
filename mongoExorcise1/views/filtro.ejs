@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Filtrando usuarios</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    
+</head>
+<body>
+    <h1>Filtrandp Usuarios</h1>
+
+    <% if( typeof gender !== 'undefined' ){ %>
+       <h1>Usuarios del Género: <%- gender %> </h1>
+    <% } else { %>
+        <h1>Error </h1>
+    <% } %>
+
+    <% if( typeof error !== 'undefined' ){ %>
+        <p><%- error %> </p>
+    <% } %>
+
+    <% if(typeof results !== 'undefined' ){ %>
+        <% results.forEach(function( item ){ %>
+            <div>
+                <p>Nombre: <%- item.username %></p>
+                <p>Género: <%- item.gender %></p>
+                <p>País: <%- item.country %></p>
+            </div>
+    <% }); %> <% } %>
+
+</body>
+</html>
