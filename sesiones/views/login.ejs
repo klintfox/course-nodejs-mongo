@@ -8,10 +8,23 @@
 </head>
 <body>
     <h1>Login</h1>
-    <form method="POST" action="/login">
-        <p>Email: <input type="text" name="email"> </p>
-        <p>Password:  <input type="password" name="password"> </p>
-        <input type="submit" value="Enviar">
-    </form>
+    <% if (typeof error != 'undefined'){ %>
+        <h3 style="color:red"> <%- error %></h3>
+        <form method="POST" action="/login">
+            <p>Email: <input type="text" name="useremail" 
+                    value="<% profile.email %>"> </p>
+            <p>Password:  <input type="password" name="userpassword"
+                    value="<% profile.password %>"> </p>
+            <input type="submit" value="Enviar">
+        </form>
+    <% } else { %>
+        <form method="POST" action="/login">
+            <p>Email: <input type="text" name="useremail" > </p>
+            <p>Password:  <input type="password" name="userpassword" > </p>
+            <input type="submit" value="Enviar">
+        </form>
+    <% } %>
+
+    
 </body>
 </html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Dashboard </title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <h1>Dashboard</h1>
+    <% if (typeof profile !== 'undefined' ) { %>
+        <div>
+            <p>Id: <%-  profile.id %></p>
+            <p>Username: <%- profile.name %></p>
+            <p>Email: <%- profile.email %></p>
+            <p>Password:  <%- profile.password %></p>
+            <a href="/logout">Cerrar Sesión</a>
+        </div>
+    <% } %>
+</body>
+</html>
