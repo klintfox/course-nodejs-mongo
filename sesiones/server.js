@@ -32,7 +32,7 @@ mongoose.connection.once("open", function() {
     console.log("Success");
   });
 
-//configurar esqhema 
+//configurar esquema 
 let customSchema = new mongoose.Schema({
     username : String,
     email : String,
