@@ -1,11 +1,11 @@
 # Ejercicios con Nodejs y Mongodb 
 
 ### Comandos 
-    - Inicializar
+- Inicializar
     ```sh 
     npm init 
     ```
-    - Instalar dependencias
+- Instalar dependencias
     ```sh
     npm install --save express 
     ```
